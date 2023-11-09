@@ -1,0 +1,38 @@
+.search-bar {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-bar form {
+  width: 70%;
+  height: auto;
+}
+
+.botonUser {
+  margin-right: 0.5rem;
+}
+
+a:hover p {
+  color: rgb(29, 185, 112);
+}
+
+a p {
+  color: rgb(20, 184, 129);
+  font-size: 1.3rem;
+}
+
+.logo {
+  margin-right: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.9rem;
+  height: 2rem;
+}
+
+.logo img {
+  width: 100%;
+  scale: 1.2;
+}

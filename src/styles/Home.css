@@ -1,0 +1,14 @@
+.home {
+  margin-bottom: 1rem;
+}
+.titulo {
+  font-size: 3rem;
+  color: rgb(20, 184, 129);
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+.sub-titulo {
+  color: rgb(20, 184, 129);
+  margin-top: 1.4rem;
+  font-size: 1.4rem;
+}
