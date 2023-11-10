@@ -6,7 +6,7 @@ import { Link, useParams } from "react-router-dom";
 import "../styles/Home.css";
 
 function Home() {
-  const pagina = Number(useParams().page);
+  const pagina = Number(useParams().page) || 1;
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
