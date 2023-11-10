@@ -21,7 +21,7 @@ function Navbar() {
       email: null,
     };
     axios
-      .post("/api/users/logout")
+      .post("https://my-movie-crib-back.onrender.com/api/users/logout")
       .then(() => {
         dispatch(setUser(initialState));
         navigate("/1");
@@ -34,7 +34,7 @@ function Navbar() {
 
   useEffect(() => {
     axios
-      .get("/api/users/me")
+      .get("https://my-movie-crib-back.onrender.com/api/users/me")
       .then((cok) => dispatch(setUser(cok.data)))
       .catch();
   }, [dispatch]);

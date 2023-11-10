@@ -9,7 +9,7 @@ function Search() {
 
   useEffect(() => {
     axios
-      .get(`/api/movies/${name}`)
+      .get(`https://my-movie-crib-back.onrender.com/api/movies/${name}`)
       .then((res) => {
         setMovies(res.data);
       })

@@ -14,7 +14,7 @@ function Register() {
   function handleRegister(e) {
     e.preventDefault();
     axios
-      .post(`/api/users/register`, {
+      .post(`https://my-movie-crib-back.onrender.com/api/users/register`, {
         email: email.value,
         password: password.value,
         name: name.value,

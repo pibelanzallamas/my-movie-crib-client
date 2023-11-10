@@ -15,7 +15,7 @@ function Login() {
   function handleLogIn(e) {
     e.preventDefault();
     axios
-      .post("/api/users/login", {
+      .post("https://my-movie-crib-back.onrender.com/api/users/login", {
         email: email.value,
         password: password.value,
       })

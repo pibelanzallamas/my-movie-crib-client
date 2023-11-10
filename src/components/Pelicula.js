@@ -12,7 +12,7 @@ function Pelicula() {
   //buscar detalles de pelicula
   useEffect(() => {
     axios
-      .get(`/api/movies/search/${id}`)
+      .get(`https://my-movie-crib-back.onrender.com/api/movies/search/${id}`)
       .then((res) => res.data)
       .then((data) => {
         setMovie(data);
@@ -23,7 +23,9 @@ function Pelicula() {
   //buscar si esta likeada
   useEffect(() => {
     axios
-      .get("/api/favorites/find", { params: { mid: movie.id, uid } })
+      .get("https://my-movie-crib-back.onrender.com/api/favorites/find", {
+        params: { mid: movie.id, uid },
+      })
       .then((fav) => {
         if (fav.data.movieId) setLike(true);
         else setLike(false);
@@ -33,7 +35,9 @@ function Pelicula() {
 
   function handleLike(mid) {
     axios
-      .post("/api/favorites/register", { data: { mid, uid } })
+      .post("https://my-movie-crib-back.onrender.com/api/favorites/register", {
+        data: { mid, uid },
+      })
       .then((add) => {
         if (!uid) alert("Ojo!", "Necesitas estar logueado 💻", "warning");
         else if (add.data) {
@@ -46,7 +50,9 @@ function Pelicula() {
   //dislikea
   function handleDislike(mid) {
     axios
-      .delete("/api/favorites/delete", { data: { mid, uid } })
+      .delete("https://my-movie-crib-back.onrender.com/api/favorites/delete", {
+        data: { mid, uid },
+      })
       .then((del) => {
         if (del.data === "OK") {
           alert("dislikeado!");

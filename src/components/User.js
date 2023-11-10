@@ -10,7 +10,7 @@ function User() {
 
   useEffect(() => {
     axios
-      .get(`/api/favorites/${id}`)
+      .get(`https://my-movie-crib-back.onrender.com/api/favorites/${id}`)
       .then((fav) => {
         setFavorites(fav.data);
       })
@@ -22,7 +22,9 @@ function User() {
   useEffect(() => {
     const fetchMovies = async () => {
       const moviePromises = favorites.map((fav) =>
-        axios.get(`/api/movies/search/${fav.movieId}`)
+        axios.get(
+          `https://my-movie-crib-back.onrender.com/api/movies/search/${fav.movieId}`
+        )
       );
 
       try {

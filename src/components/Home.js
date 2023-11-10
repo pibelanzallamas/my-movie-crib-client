@@ -10,10 +10,12 @@ function Home() {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    axios.get(`/api/movies/home/${pagina}`).then((res) => {
-      const allMovies = res.data;
-      setMovies(allMovies);
-    });
+    axios
+      .get(`https://my-movie-crib-back.onrender.com/api/movies/home/${pagina}`)
+      .then((res) => {
+        const allMovies = res.data;
+        setMovies(allMovies);
+      });
   }, [pagina]);
 
   return (
