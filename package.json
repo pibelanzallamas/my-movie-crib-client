@@ -1,6 +1,7 @@
 {
   "name": "my-movie-crib-",
   "version": "0.1.0",
+  "author": "brandon castillo",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.7",

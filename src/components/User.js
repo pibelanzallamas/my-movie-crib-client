@@ -51,15 +51,14 @@ function User() {
   return (
     <div>
       <h3 className="titulo">Favoritos</h3>
-      <div className="container">
-        <div className="columns is-multiline">
-          {movies.map((movie) => (
-            <div key={movie.id} className="column is-one-fifth">
+      <div className="all">
+        <div className="movie-display-layout">
+          {movies.map((movie, i) => (
+            <div key={i} className="movie-poster">
               <Link to={`/movies/search/${movie.id}`}>
                 <img
                   src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
                   alt={movie.title}
-                  className="movie-poster"
                 />
               </Link>
             </div>

@@ -3,9 +3,8 @@
 }
 
 .titulo {
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: rgb(20, 184, 129);
-  font-weight: 400;
   margin-bottom: 1rem;
 }
 
@@ -13,4 +12,25 @@
   color: rgb(20, 184, 129);
   margin-top: 1.4rem;
   font-size: 1.4rem;
+}
+
+.movie-display-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 0.4rem;
+  margin: 1rem;
+}
+
+.movie-poster img {
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 960px) {
+  .movie-display-layout {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(150px, 150px));
+    max-width: 935px;
+    margin: 0 auto;
+  }
 }

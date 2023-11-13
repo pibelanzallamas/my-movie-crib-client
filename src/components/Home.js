@@ -21,15 +21,14 @@ function Home() {
   return (
     <div className="home">
       <h1 className="titulo">My Movie Crib 🎬</h1>
-      <div className="container">
-        <div className="columns is-multiline">
+      <div className="all">
+        <div className="movie-display-layout">
           {movies.map((movie, i) => (
-            <div key={i} className="column is-one-fifth">
+            <div key={i} className="movie-poster">
               <Link to={`/movies/search/${movie.id}`}>
                 <img
                   src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
                   alt={movie.title}
-                  className="movie-poster"
                 />
               </Link>
             </div>
