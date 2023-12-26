@@ -41,7 +41,7 @@ function Pelicula() {
       .then((add) => {
         if (!uid) alert("Ojo!", "Necesitas estar logueado 💻", "warning");
         else if (add.data) {
-          alert("likeado!");
+          alert("Likeado!");
           setLike(true);
         } else alert("La propiedad ya esta en favoritos. 🤧");
       });
@@ -55,7 +55,7 @@ function Pelicula() {
       })
       .then((del) => {
         if (del.data === "OK") {
-          alert("dislikeado!");
+          alert("Dislikeado!");
           setLike(false);
         }
       })

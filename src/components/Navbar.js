@@ -24,10 +24,12 @@ function Navbar() {
       .post("https://my-movie-crib-back.onrender.com/api/users/logout")
       .then(() => {
         dispatch(setUser(initialState));
+        alert("Salió!");
         navigate("/1");
       })
       .catch((err) => {
         console.log("error: ", err);
+        alert("Lo lamento, ocurrio un error!");
         navigate("/1");
       });
   }

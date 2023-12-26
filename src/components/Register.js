@@ -25,7 +25,7 @@ function Register() {
           alert("El usuario ha sido creado!");
           navigate("/users/login");
         } else if (user.data[1] === false) {
-          alert("El usuario ya existe!");
+          alert("El mail ya sido utilizado!");
         } else {
           alert("Ingreso datos incorrectos!");
         }
