@@ -23,7 +23,19 @@
 
 .movie-poster img {
   width: 100%;
+  object-fit: cover;
+}
+
+.movies-poster {
+  width: 100%;
   height: 100%;
+  overflow: hidden;
+}
+
+.movies-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 @media (min-width: 960px) {
