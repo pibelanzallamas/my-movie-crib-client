@@ -92,7 +92,7 @@ function Pelicula() {
 
           {movie.homepage ? (
             <p className="subtitle is-6">
-              Webpage: {` `}
+              Official Site: {` `}
               <a target="_blank" rel="noreferrer" href={`${movie.homepage}`}>
                 {movie.homepage}
               </a>
