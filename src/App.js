@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router";
+import { Analytics } from "@vercel/analytics/react";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Pelicula from "./components/Pelicula";
@@ -11,6 +12,7 @@ import Search from "./components/Search";
 function App() {
   return (
     <div>
+      <Analytics />
       <Navbar />
       <Routes>
         <Route path={"/"} element={<Home />} />
