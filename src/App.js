@@ -8,6 +8,7 @@ import Register from "./components/Register";
 import Login from "./components/Login";
 import User from "./components/User";
 import Search from "./components/Search";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path={"users/login"} element={<Login />} />
         <Route path={"users/:id"} element={<User />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
